@@ -1,0 +1,17 @@
+<div class="container mt-5 card">
+  <h1>My restaurants</h1>
+
+  <div class="row mt-5">
+    <ul class="list-group list-group-flush">
+    <% @restaurants.each do |restaurant| %>
+      <li class="list-group-item">
+        <%= link_to restaurant.name, restaurant_path(restaurant) %>
+      </li>
+    <% end %>
+    </ul>
+  </div>
+
+  <div class="row border-top mt-5">
+    <%= link_to "Add a new restaurant", restaurants_new_path %>
+  </div>
+</div>
